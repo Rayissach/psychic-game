@@ -7,76 +7,19 @@
 	<title>Psychic Game</title>
 </head>
 <body>
-	<h1>The Psychic Game</h1>
+	<div class="game">
+		<h1>The Psychic Game</h1>
 
-	<p>Guess what letter I'm thinking of</p>
-	<p>Wins: </p>
-	<p>Losses: </p>
-	<p>Guesses Left:</p>
-	<p>You're Guesses so far: </p>
+		<p>Guess what letter I'm thinking of</p>
+		<p>Wins: </p>
+		<p>Losses: </p>
+		<p>Guesses Left:</p>
+		<p>You're Guesses so far: </p>
+	</div>
+	
 	<script src="assets/js/game.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
 </body>
 </html>
-	<!-- <h1>THE PSYCHIC GAME</h1>
-
-	<br>
-
-	<p>Guess what letter I'm thinking of</p>
-
-	<script type="text/javascript">
-		var wins = 0;
-		var losses = 0;
-		var guessesleft = 5;
-		var incorrectguesses = [];
-
-
-		var choices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-		var computerGuess = choices[Math.floor(Math.random() * choices.length)];
-		console.log("computerGuess", computerGuess);
-
-
-		document.onkeyup = function(event) {
-	        var userGuess =(event.key).toLowerCase();
-	        VALIDATE THAT KEYS ARE LETTERS ONLY
-	        console.log("userGuess", userGuess);
-	        if (incorrectguesses.indexOf(userGuess) === -1 ) {
-	        	guessesleft--;
-	        	incorrectguesses.push(userGuess);
-	        	console.log("incorrectguesses", incorrectguesses);
-	        	if(userGuess === computerGuess) {
-	        		wins ++; 
-	        		guessesleft = 5;
-	        		incorrectguesses = [];
-	        		computerGuess = choices[Math.floor(Math.random() * choices.length)];
-	        		console.log("you win",wins,"!");
-	        		console.log("computerGuessNew", computerGuess);
-	        	}
-	        }
-	        else{
-	        	alert("alderdy guessdy",userGuess,"try another letter");
-	        }
-
-	        console.log("guessesleft", guessesleft);
-      };
-
-
-
-			var computerGuess = choices[Math.floor(Math.random() * choices.length)];
-
-
-		function loadgame() {
-
-			var html = 
-
-			"<p>Wins:" + wins + "</p>" +
-			"<p>losses:" + losses + "</p>" +
-			"<p>guessesleft" + guessesleft + "</p>" +
-
-
-		}
-
-
-			appendChild to show letters on html

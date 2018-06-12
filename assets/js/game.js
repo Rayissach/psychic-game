@@ -12,20 +12,31 @@ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.l
 // users  guess is pushed to gusses so far
 guessesSoFar.push(userGuess);
 
+//if the users guess matches the computers. Increment wins by 1
 if (userGuess == computerGuess){
 wins++;
+//guesses left reset back to 9 if user wins
+guessesLeft = 9; 
+//the guesses are emptied from the array
+guessesSoFar.length = 0;
 } else if (guessesLeft == 0){
 losses++;
+//guesses left reset back to 9 if user losses
+guessesLeft = 9;
+guessesSoFar.length = 0;
 } else if (userGuess != computerGuess){
 guessesLeft--;
 }
-// console.log("/////////////////////////");
-console.log("Userguess: ",userGuess);
-console.log("random CG: ",computerGuess);
-console.log("wins:",wins);
-console.log("losses:",losses);
-console.log("/////////////////////////");
 
+var html = 
+"<h1>The Psychic Game</h1>" + 
+"<p>Guess what letter I'm thinking of!</p>" +
+"<p>Wins: " + wins + "</p>" +
+"<p>Losses: " + losses + "</p>" +
+"<p>Guesses Left: " + guessesLeft + "</p>" +
+"<p>Your Guesses so far: " + guessesSoFar + "</p>"
+
+document.querySelector('.game').innerHTML = html;
 }
 
 
