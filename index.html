@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="enus">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Psychic Game</title>
-
 </head>
 <body>
+	<h1>The Psychic Game</h1>
 
-	<h1>THE PSYCHIC GAME</h1>
+	<p>Guess what letter I'm thinking of</p>
+	<p>Wins: </p>
+	<p>Losses: </p>
+	<p>Guesses Left:</p>
+	<p>You're Guesses so far: </p>
+
+</body>
+</html>
+	<!-- <h1>THE PSYCHIC GAME</h1>
 
 	<br>
 
@@ -27,7 +37,7 @@
 
 		document.onkeyup = function(event) {
 	        var userGuess =(event.key).toLowerCase();
-	        // VALIDATE THAT KEYS ARE LETTERS ONLY
+	        VALIDATE THAT KEYS ARE LETTERS ONLY
 	        console.log("userGuess", userGuess);
 	        if (incorrectguesses.indexOf(userGuess) === -1 ) {
 	        	guessesleft--;
@@ -51,25 +61,19 @@
 
 
 
-		// 	var computerGuess = choices[Math.floor(Math.random() * choices.length)];
+			var computerGuess = choices[Math.floor(Math.random() * choices.length)];
 
 
-		// function loadgame() {
+		function loadgame() {
 
-		// 	var html = 
+			var html = 
 
-		// 	"<p>Wins:" + wins + "</p>" +
-		// 	"<p>losses:" + losses + "</p>" +
-		// 	"<p>guessesleft" + guessesleft + "</p>" +
-
-
-		// }
+			"<p>Wins:" + wins + "</p>" +
+			"<p>losses:" + losses + "</p>" +
+			"<p>guessesleft" + guessesleft + "</p>" +
 
 
-			//appendChild to show letters on html
+		}
 
 
-	</script>
-
-</body>
-</html>
+			appendChild to show letters on html
