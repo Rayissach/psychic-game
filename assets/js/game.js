@@ -13,10 +13,19 @@ var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.l
 guessesSoFar.push(userGuess);
 
 if (userGuess == computerGuess){
-wins++
-
+wins++;
+} else if (guessesLeft == 0){
+losses++;
+} else if (userGuess != computerGuess){
+guessesLeft--;
 }
-console.log(userGuess);
+// console.log("/////////////////////////");
+console.log("Userguess: ",userGuess);
+console.log("random CG: ",computerGuess);
+console.log("wins:",wins);
+console.log("losses:",losses);
+console.log("/////////////////////////");
+
 }
 
 
