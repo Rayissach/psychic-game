@@ -37,6 +37,9 @@ var html =
 "<p>Your Guesses so far: " + guessesSoFar + "</p>"
 
 document.querySelector('.game').innerHTML = html;
+
+var parentDom = document.getElementsById("ptag5");
+console.log(parentDom)
 }
 
 
